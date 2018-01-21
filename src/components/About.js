@@ -1,8 +1,11 @@
 import React from "react"
 
 const About = () => (
-  <div className="container">
-    <h1>About Us</h1>
+  <div
+    className="container"
+    style={{ height: "300px", display: "flex", alignItems: "center" }}
+  >
+    <h1>Coming Soon!</h1>
   </div>
 )
 

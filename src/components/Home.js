@@ -15,7 +15,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ background: "#f1f5fa" }}>
         <Particles
           params={{
             particles: {
@@ -166,9 +166,66 @@ class Home extends Component {
               textAlign: "center"
             }}
           >
-            Bite-Crypto. Providing bite sized cryptocurrency info.
+            Bite Crypto. Providing bite sized cryptocurrency info.
           </h1>
         </div>
+        <div
+          className="container"
+          style={{
+            marginTop: "20px"
+          }}
+        >
+          {/* <h1>ICO Reviews</h1> */}
+
+          <div
+            style={{
+              marginTop: "20px",
+              display: "flex",
+              justifyContent: "space-between",
+              flexWarp: "warp"
+            }}
+          >
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/r-iLWMTc354"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Experty"
+                style={{
+                  height: "378px",
+                  width: "672px"
+                }}
+              />
+            </div>
+            <div
+              style={{
+                width: "100%",
+                paddingLeft: "25px"
+              }}
+            >
+              <h2>Experty Review</h2>
+              <p>
+                Experty is a protocol that brings the “expert network” business
+                onto the blockchain. It aims to connect experienced
+                professionals to users for consulting purposes.
+              </p>
+              <p>
+                Experty plans to integrate their business into available social
+                media platform; knowledge providers will be able to share their
+                Experty link directly on their social or professional media such
+                as LinkedIn, email signature, or Twitter profile. Payments will
+                also be made through a smart contract that directly links the
+                knowledge provider with the knowledge seeker, so payment between
+                the two parties will be near instant.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="container" style={{ paddingTop: "20px" }}>
+          <h1>Upcoming Reviews / Guides</h1>
+        </div>
+        <div>Footer</div>
       </div>
     )
   }
