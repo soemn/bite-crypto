@@ -1,7 +1,7 @@
 import React from "react"
 
 const Experty = () => (
-  <div>
+  <div className="container">
     <h1>Experty Token Review</h1>
     <iframe
       width="560"

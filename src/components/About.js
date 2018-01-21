@@ -1,7 +1,7 @@
 import React from "react"
 
 const About = () => (
-  <div>
+  <div className="container">
     <h1>About Us</h1>
   </div>
 )
