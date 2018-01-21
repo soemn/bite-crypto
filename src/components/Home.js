@@ -225,7 +225,25 @@ class Home extends Component {
         <div className="container" style={{ paddingTop: "20px" }}>
           <h1>Upcoming Reviews / Guides</h1>
         </div>
-        <div>Footer</div>
+        <div
+          style={{
+            background: "#0a5785",
+            height: "100%"
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              color: "#f1f5fa",
+              paddingTop: "20px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <p>© BiteCrypto 2018</p>
+          </div>
+        </div>
       </div>
     )
   }
