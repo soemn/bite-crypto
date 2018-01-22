@@ -205,7 +205,16 @@ class Home extends Component {
                 paddingLeft: "25px"
               }}
             >
-              <h2>Experty Review</h2>
+              <h2
+                style={{
+                  backgroundColor: "#c5dff8",
+                  borderRadius: "6px",
+                  textAlign: "center",
+                  padding: "3px"
+                }}
+              >
+                Experty Review
+              </h2>
               <p>
                 Experty is a protocol that brings the “expert network” business
                 onto the blockchain. It aims to connect experienced
@@ -220,6 +229,15 @@ class Home extends Component {
                 knowledge provider with the knowledge seeker, so payment between
                 the two parties will be near instant.
               </p>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <a
+                  href="/experty"
+                  class="btn"
+                  style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
+                >
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
         </div>

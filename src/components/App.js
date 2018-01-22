@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Main />
+        <Main style={{ background: "#f1f5fa" }} />
         <Footer />
       </div>
     )
