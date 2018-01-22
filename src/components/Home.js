@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Particles from "react-particles-js"
+import binanceLogo from "../images/bnb.png"
 
 class Home extends Component {
   componentDidMount() {
@@ -222,26 +223,45 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="container" style={{ paddingTop: "20px" }}>
-          <h1>Upcoming Reviews / Guides</h1>
-        </div>
         <div
-          style={{
-            background: "#0a5785",
-            height: "100%"
-          }}
+          className="container"
+          style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
-          <div
-            className="container"
-            style={{
-              color: "#f1f5fa",
-              paddingTop: "20px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <p>© BiteCrypto 2018</p>
+          <h1>Upcoming Reviews / Guides</h1>
+          <div style={{ paddingTop: "15px" }}>
+            <div
+              className="card"
+              style={{
+                width: "20rem"
+              }}
+            >
+              <div
+                className="card-block"
+                style={{ padding: "20px", textAlign: "center" }}
+              >
+                <img
+                  src={binanceLogo}
+                  style={{
+                    height: "50px",
+                    display: "inline-block",
+                    marginBottom: "10px"
+                  }}
+                  alt="Binance"
+                />
+                <h4 className="card-title">Binance Exchange Guide</h4>
+                <p className="card-text">
+                  Learn how to trade on one of the best cryptocurrency
+                  exchanges!
+                </p>
+                <button
+                  href="#"
+                  class="btn"
+                  style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
+                >
+                  Coming Soon!
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

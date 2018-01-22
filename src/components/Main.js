@@ -5,7 +5,13 @@ import About from "./About"
 import Experty from "./reviews/Experty"
 
 const Main = () => (
-  <main>
+  <main
+    style={{
+      display: "flex",
+      minHeight: "82vh",
+      flexDirection: "column"
+    }}
+  >
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
