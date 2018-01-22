@@ -176,8 +176,6 @@ class Home extends Component {
             marginTop: "20px"
           }}
         >
-          {/* <h1>ICO Reviews</h1> */}
-
           <div
             style={{
               marginTop: "20px",
@@ -185,8 +183,9 @@ class Home extends Component {
               justifyContent: "space-between",
               flexWarp: "warp"
             }}
+            className="row"
           >
-            <div>
+            <div className="col">
               <iframe
                 src="https://www.youtube.com/embed/r-iLWMTc354"
                 frameBorder="0"
@@ -195,7 +194,9 @@ class Home extends Component {
                 title="Experty"
                 style={{
                   height: "378px",
-                  width: "672px"
+                  width: "100%",
+                  maxWidth: "672px",
+                  minWidth: "320px"
                 }}
               />
             </div>
@@ -204,6 +205,7 @@ class Home extends Component {
                 width: "100%",
                 paddingLeft: "25px"
               }}
+              className="col"
             >
               <h2
                 style={{
