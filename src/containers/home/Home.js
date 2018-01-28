@@ -1,6 +1,19 @@
 import React, { Component } from "react"
 import Particles from "react-particles-js"
-import binanceLogo from "../images/bnb.png"
+import binanceLogo from "../../images/bnb.png"
+import particleConfig from "./particle-config"
+import styled from "styled-components"
+
+const HomeBackground = styled.div``
+const StyledParticles = styled(Particles)`
+  width: 100%;
+  max-height: 500px;
+  min-height: 500px;
+  background: #0a5785;
+  margin-bottom: -500px;
+  z-index: 1;
+  position: absolute;
+`
 
 class Home extends Component {
   componentDidMount() {
@@ -14,130 +27,11 @@ class Home extends Component {
       s.parentNode.insertBefore(po, s)
     })()
   }
+
   render() {
     return (
       <div style={{ background: "#f1f5fa" }}>
-        <Particles
-          params={{
-            particles: {
-              number: {
-                value: 100,
-                density: {
-                  enable: true,
-                  value_area: 1000
-                }
-              },
-              color: {
-                value: "#c5dff8"
-              },
-              shape: {
-                type: "circle",
-                stroke: {
-                  width: 0,
-                  color: "#000000"
-                },
-                polygon: {
-                  nb_sides: 9
-                },
-                image: {
-                  src: "img/github.svg",
-                  width: 100,
-                  height: 100
-                }
-              },
-              opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                  enable: true,
-                  speed: 1,
-                  opacity_min: 0.1,
-                  sync: false
-                }
-              },
-              size: {
-                value: 3,
-                random: true,
-                anim: {
-                  enable: false,
-                  speed: 40,
-                  size_min: 0.1,
-                  sync: false
-                }
-              },
-              line_linked: {
-                enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.1,
-                width: 1
-              },
-              move: {
-                enable: true,
-                speed: 1.5,
-                direction: "top-right",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false,
-                attract: {
-                  enable: false,
-                  rotateX: 600,
-                  rotateY: 1200
-                }
-              }
-            },
-            interactivity: {
-              detect_on: "canvas",
-              events: {
-                onhover: {
-                  enable: true,
-                  mode: "bubble"
-                },
-                onclick: {
-                  enable: false,
-                  mode: "push"
-                },
-                resize: true
-              },
-              modes: {
-                grab: {
-                  distance: 400,
-                  line_linked: {
-                    opacity: 1
-                  }
-                },
-                bubble: {
-                  distance: 100,
-                  size: 5,
-                  duration: 2,
-                  opacity: 0.8,
-                  speed: 3
-                },
-                repulse: {
-                  distance: 200,
-                  duration: 0.4
-                },
-                push: {
-                  particles_nb: 4
-                },
-                remove: {
-                  particles_nb: 2
-                }
-              }
-            },
-            retina_detect: true
-          }}
-          style={{
-            width: "100%",
-            maxHeight: "500px",
-            minHeight: "500px",
-            background: "#0a5785",
-            marginBottom: "-500px",
-            zIndex: "1",
-            position: "absolute"
-          }}
-        />
+        <StyledParticles params={particleConfig} />
         <div
           style={{
             display: "flex",
@@ -150,9 +44,9 @@ class Home extends Component {
         >
           <div
             style={{
-              alignSelf: "flex-start",
+              alignSelf: "flex-end",
               display: "flex",
-              justifyContent: "flex-end",
+              justifyContent: "center",
               width: "100%"
             }}
           >
@@ -234,7 +128,7 @@ class Home extends Component {
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <a
                   href="/experty"
-                  class="btn"
+                  className="btn"
                   style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
                 >
                   Read More
@@ -275,7 +169,7 @@ class Home extends Component {
                 </p>
                 <button
                   href="#"
-                  class="btn"
+                  className="btn"
                   style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
                 >
                   Coming Soon!
