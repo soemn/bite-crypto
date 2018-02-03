@@ -3,15 +3,16 @@ import Particles from "react-particles-js"
 import binanceLogo from "../../images/bnb.png"
 import particleConfig from "./particle-config"
 import styled from "styled-components"
-import backgroundImage from "../../images/background5.png"
+import backgroundImage from "../../images/background2.png"
+import logo from "../../images/bite-crypto-logo.png"
 
 const HomeBackground = styled.div``
 const HomeHeaderWrapper = styled.div``
 const StyledParticles = styled(Particles)`
   width: 100%;
-  max-height: 500px;
-  min-height: 500px;
-  margin-bottom: -500px;
+  max-height: 400px;
+  min-height: 400px;
+  margin-bottom: -400px;
   position: absolute;
   overflow: hidden;
 `
@@ -23,35 +24,56 @@ const HomeBackgroundContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 500px;
-  min-height: 500px;
+  max-height: 400px;
+  min-height: 400px;
 `
-const HomeBackgroundText = styled.h1`
-  position: absolute;
-  z-index: 5;
+const HomeBackgroundText = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
   color: #f1f5fa;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+`
+const MainContent = styled.div.attrs({
+  className: "container"
+})`
+  padding: 15px;
+  background: #ffffff;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+`
+const ButtonLink = styled.a.attrs({
+  className: "btn"
+})`
+  background-color: #1198ea;
+  color: #f1f5fa;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #1f5aa0;
+    color: #f1f5fa;
+    transition: 0.5s;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
 `
 
 class Home extends Component {
   render() {
     return (
-      <div style={{ background: "#f1f5fa" }}>
+      <div style={{ background: "#f9f9f9" }}>
         <HomeHeaderWrapper>
           <HomeBackgroundContent>
             <StyledParticles params={particleConfig} />
             <HomeBackgroundText>
-              Bite Crypto. Providing bite sized cryptocurrency info.
+              <h1 style={{ textAlign: "center" }}>
+                Bite Crypto. Providing bite sized cryptocurrency info.
+              </h1>
             </HomeBackgroundText>
           </HomeBackgroundContent>
         </HomeHeaderWrapper>
-        <div
-          className="container"
-          style={{
-            marginTop: "20px"
-          }}
-        >
+        <MainContent>
           <div
             style={{
               marginTop: "20px"
@@ -69,27 +91,31 @@ class Home extends Component {
                   height: "378px",
                   width: "100%",
                   maxWidth: "672px",
-                  minWidth: "290px"
+                  minWidth: "290px",
+                  borderRadius: "5px",
+                  boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+                  marginBottom: "8px"
                 }}
               />
             </div>
             <div
               style={{
-                width: "100%",
-                paddingLeft: "25px"
+                width: "100%"
+                // paddingLeft: "25px"
               }}
               className="col"
             >
-              <h2
+              <h3
                 style={{
                   backgroundColor: "#c5dff8",
-                  borderRadius: "6px",
+                  borderRadius: "5px",
                   textAlign: "center",
-                  padding: "3px"
+                  padding: "5px",
+                  boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)"
                 }}
               >
                 Experty Review
-              </h2>
+              </h3>
               <p>
                 Experty is a protocol that brings the “expert network” business
                 onto the blockchain. It aims to connect experienced
@@ -105,23 +131,20 @@ class Home extends Component {
                 the two parties will be near instant.
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <a
-                  href="/experty"
-                  className="btn"
-                  style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
-                >
-                  Read More
-                </a>
+                <ButtonLink href="/experty">Read More</ButtonLink>
               </div>
             </div>
           </div>
-        </div>
+        </MainContent>
         <div
           className="container"
           style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
-          <h1>Upcoming Reviews / Guides</h1>
-          <div style={{ paddingTop: "15px" }}>
+          <div className="row">
+            <h1 className="col">Upcoming Reviews / Guides</h1>
+          </div>
+
+          <div style={{ paddingTop: "15px" }} className="row">
             <div
               className="card"
               style={{
@@ -146,13 +169,7 @@ class Home extends Component {
                   Learn how to trade on one of the best cryptocurrency
                   exchanges!
                 </p>
-                <button
-                  href="#"
-                  className="btn"
-                  style={{ backgroundColor: "#1198ea", color: "#f1f5fa" }}
-                >
-                  Coming Soon!
-                </button>
+                <ButtonLink href="#">Coming Soon!</ButtonLink>
               </div>
             </div>
           </div>
