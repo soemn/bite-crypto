@@ -151,34 +151,39 @@ class Home extends Component {
                 width: "20rem"
               }}
             >
-              <div
-                className="card-block"
-                style={{ padding: "20px", textAlign: "center" }}
+              <a
+                href="/binance"
+                style={{ textDecoration: "none", color: "#222529" }}
               >
-                <img
-                  src={binanceLogo}
-                  style={{
-                    width: "100%",
-                    display: "inline-block",
-                    marginBottom: "10px"
-                  }}
-                />
-                <img
-                  src={binanceGuide}
-                  style={{
-                    width: "100%",
-                    display: "inline-block",
-                    marginBottom: "10px"
-                  }}
-                  alt="Binance"
-                />
-                <h4 className="card-title">Binance Exchange Guide</h4>
-                <p className="card-text">
-                  Learn how to trade on one of the best cryptocurrency
-                  exchanges!
-                </p>
-                <ButtonLink href="/binance">View Video</ButtonLink>
-              </div>
+                <div
+                  className="card-block"
+                  style={{ padding: "20px", textAlign: "center" }}
+                >
+                  <img
+                    src={binanceLogo}
+                    style={{
+                      width: "100%",
+                      display: "inline-block",
+                      marginBottom: "10px"
+                    }}
+                  />
+                  <img
+                    src={binanceGuide}
+                    style={{
+                      width: "100%",
+                      display: "inline-block",
+                      marginBottom: "10px"
+                    }}
+                    alt="Binance"
+                  />
+                  <h4 className="card-title">Binance Exchange Guide</h4>
+                  <p className="card-text">
+                    Learn how to trade on one of the best cryptocurrency
+                    exchanges!
+                  </p>
+                  <ButtonLink href="/binance">View Video</ButtonLink>
+                </div>
+              </a>
             </div>
           </div>
         </div>
