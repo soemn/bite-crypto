@@ -3,67 +3,49 @@ import Particles from "react-particles-js"
 import binanceLogo from "../../images/bnb.png"
 import particleConfig from "./particle-config"
 import styled from "styled-components"
+import backgroundImage from "../../images/background5.png"
 
 const HomeBackground = styled.div``
+const HomeHeaderWrapper = styled.div``
 const StyledParticles = styled(Particles)`
   width: 100%;
   max-height: 500px;
   min-height: 500px;
-  background: #0a5785;
   margin-bottom: -500px;
-  z-index: 1;
   position: absolute;
+  overflow: hidden;
+`
+const HomeBackgroundContent = styled.div`
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 500px;
+  min-height: 500px;
+`
+const HomeBackgroundText = styled.h1`
+  position: absolute;
+  z-index: 5;
+  color: #f1f5fa;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 `
 
 class Home extends Component {
-  componentDidMount() {
-    ;(function() {
-      var po = document.createElement("script")
-      po.type = "text/javascript"
-      po.async = true
-      po.src = "https://hitbtc.com/get_widget?pair=btcusd"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(po, s)
-      s.parentNode.insertBefore(po, s)
-    })()
-  }
-
   render() {
     return (
       <div style={{ background: "#f1f5fa" }}>
-        <StyledParticles params={particleConfig} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            maxHeight: "500px",
-            minHeight: "500px"
-          }}
-        >
-          <div
-            style={{
-              alignSelf: "flex-end",
-              display: "flex",
-              justifyContent: "center",
-              width: "100%"
-            }}
-          >
-            <div id="hitbtc-ticker" className="hit-medium" />
-          </div>
-          <h1
-            className="container"
-            style={{
-              position: "absolute",
-              zIndex: "2",
-              color: "#f1f5fa",
-              textAlign: "center"
-            }}
-          >
-            Bite Crypto. Providing bite sized cryptocurrency info.
-          </h1>
-        </div>
+        <HomeHeaderWrapper>
+          <HomeBackgroundContent>
+            <StyledParticles params={particleConfig} />
+            <HomeBackgroundText>
+              Bite Crypto. Providing bite sized cryptocurrency info.
+            </HomeBackgroundText>
+          </HomeBackgroundContent>
+        </HomeHeaderWrapper>
         <div
           className="container"
           style={{
@@ -72,10 +54,7 @@ class Home extends Component {
         >
           <div
             style={{
-              marginTop: "20px",
-              display: "flex",
-              justifyContent: "space-between",
-              flexWarp: "warp"
+              marginTop: "20px"
             }}
             className="row"
           >
@@ -90,7 +69,7 @@ class Home extends Component {
                   height: "378px",
                   width: "100%",
                   maxWidth: "672px",
-                  minWidth: "320px"
+                  minWidth: "290px"
                 }}
               />
             </div>
