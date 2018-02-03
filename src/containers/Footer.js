@@ -17,7 +17,9 @@ const Footer = () => (
         alignItems: "center"
       }}
     >
-      <p>© BiteCrypto 2018</p>
+      <a href="/" style={{ textDecoration: "none", color: "#f1f5fa" }}>
+        <p>© BiteCrypto 2018</p>
+      </a>
     </div>
   </div>
 )
