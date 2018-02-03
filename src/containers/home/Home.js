@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Particles from "react-particles-js"
 import binanceLogo from "../../images/bnb.png"
+import binanceGuide from "../../images/binance-tutorial.png"
 import particleConfig from "./particle-config"
 import styled from "styled-components"
 import backgroundImage from "../../images/background2.png"
@@ -101,7 +102,6 @@ class Home extends Component {
             <div
               style={{
                 width: "100%"
-                // paddingLeft: "25px"
               }}
               className="col"
             >
@@ -141,7 +141,7 @@ class Home extends Component {
           style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
           <div className="row">
-            <h1 className="col">Upcoming Reviews / Guides</h1>
+            <h1 className="col">Latest Reviews / Guides</h1>
           </div>
 
           <div style={{ paddingTop: "15px" }} className="row">
@@ -158,7 +158,15 @@ class Home extends Component {
                 <img
                   src={binanceLogo}
                   style={{
-                    height: "50px",
+                    width: "100%",
+                    display: "inline-block",
+                    marginBottom: "10px"
+                  }}
+                />
+                <img
+                  src={binanceGuide}
+                  style={{
+                    width: "100%",
                     display: "inline-block",
                     marginBottom: "10px"
                   }}
@@ -169,7 +177,7 @@ class Home extends Component {
                   Learn how to trade on one of the best cryptocurrency
                   exchanges!
                 </p>
-                <ButtonLink href="#">Coming Soon!</ButtonLink>
+                <ButtonLink href="/binance">View Video</ButtonLink>
               </div>
             </div>
           </div>

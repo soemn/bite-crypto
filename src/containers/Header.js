@@ -1,5 +1,14 @@
 import React from "react"
 import logo from "../images/bite-crypto-small.png"
+import styled from "styled-components"
+
+const NavDropdown = styled.li.attrs({
+  className: "nav-item dropdown"
+})`
+  :hover {
+    cursor: pointer;
+  }
+`
 
 const Header = () => (
   <header>
@@ -35,7 +44,7 @@ const Header = () => (
                 About
               </a>
             </li>
-            <li className="nav-item dropdown">
+            <NavDropdown>
               <a
                 className="nav-link dropdown-toggle"
                 id="navbarDropdown"
@@ -46,12 +55,29 @@ const Header = () => (
               >
                 ICO Reviews
               </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="/experty">
+              <div className="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a className="dropdown-item nav-item" href="/experty">
                   Experty
                 </a>
               </div>
-            </li>
+            </NavDropdown>
+            <NavDropdown>
+              <a
+                className="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Guides
+              </a>
+              <div className="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a className="dropdown-item nav-item" href="/binance">
+                  Binance
+                </a>
+              </div>
+            </NavDropdown>
           </ul>
         </div>
       </div>

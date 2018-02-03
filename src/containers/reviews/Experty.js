@@ -5,17 +5,25 @@ const Experty = () => (
     <div style={{ paddingTop: "15px" }}>
       <h1>Experty Token Review</h1>
     </div>
-    <div className="row">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/r-iLWMTc354"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-        title="Experty"
-        className="col"
-      />
+    <div className="row" style={{ paddingTop: "15px" }}>
+      <div className="col">
+        <iframe
+          src="https://www.youtube.com/embed/r-iLWMTc354"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="Binance"
+          style={{
+            height: "378px",
+            width: "100%",
+            maxWidth: "672px",
+            minWidth: "290px",
+            borderRadius: "5px",
+            boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+            marginBottom: "8px"
+          }}
+        />
+      </div>
       <div className="col">
         <h2>ICO Details</h2>
         <p>Ticker symbol: EXY</p>
@@ -25,18 +33,18 @@ const Experty = () => (
           Hard cap at ICO: $9,000,000 USD or 33,000 ETH , whichever is lower(33%
           of total supply)
         </p>
+        <p>Maximum Market Cap: $27,272,272</p>
+        <p>Exchange Rate: 1000 EXY : 1 ETH</p>
+        <p>Countries excluded: US, Canada, UK, China, Singapore, Hong Kong</p>
       </div>
     </div>
 
     <div>
-      <p>Maximum Market Cap: $27,272,272</p>
-      <p>Exchange Rate: 1000 EXY : 1 ETH</p>
       <p>
         Bonuses: Up to 60% bonus tokens (1 month vesting) + additional 5000 EXY
         for partners, Up to 40% bonus tokens + additional 1000 EXY based on
         Proof-of-Caring tier
       </p>
-      <p>Countries excluded: US, Canada, UK, China, Singapore, Hong Kong</p>
     </div>
 
     <div style={{ paddingBottom: "20px" }}>

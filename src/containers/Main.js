@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom"
 import Home from "./home/Home"
 import About from "./About"
 import Experty from "./reviews/Experty"
+import BinanceGuide from "./guides/Binance-guide"
 
 const Main = () => (
   <main
@@ -16,6 +17,7 @@ const Main = () => (
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/experty" component={Experty} />
+      <Route path="/binance" component={BinanceGuide} />
     </Switch>
   </main>
 )
