@@ -3,23 +3,28 @@ import { Switch, Route } from "react-router-dom"
 import Home from "./home/Home"
 import About from "./About"
 import Experty from "./reviews/Experty"
+import TomoChain from "./reviews/Tomochain"
 import BinanceGuide from "./guides/Binance-guide"
+import GeminiGuide from "./guides/Gemini-guide"
+import styled from "styled-components"
+
+const MainWrapper = styled.main`
+  display: flex;
+  min-height: 82vh;
+  flex-direction: column;
+`
 
 const Main = () => (
-  <main
-    style={{
-      display: "flex",
-      minHeight: "82vh",
-      flexDirection: "column"
-    }}
-  >
+  <MainWrapper>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/experty" component={Experty} />
+      <Route path="/tomochain" component={TomoChain} />
       <Route path="/binance" component={BinanceGuide} />
+      <Route path="/gemini" component={GeminiGuide} />
     </Switch>
-  </main>
+  </MainWrapper>
 )
 
 export default Main

@@ -59,6 +59,9 @@ const Header = () => (
                 <a className="dropdown-item nav-item" href="/experty">
                   Experty
                 </a>
+                <a className="dropdown-item nav-item" href="/tomochain">
+                  TomoChain
+                </a>
               </div>
             </NavDropdown>
             <NavDropdown>
@@ -74,7 +77,10 @@ const Header = () => (
               </a>
               <div className="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a className="dropdown-item nav-item" href="/binance">
-                  Binance
+                  Trading Cryptocurreny on Binance
+                </a>
+                <a className="dropdown-item nav-item" href="/gemini">
+                  Trading Fiat to Crypto on Gemini
                 </a>
               </div>
             </NavDropdown>

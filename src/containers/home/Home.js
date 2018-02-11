@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import Particles from "react-particles-js"
 import binanceLogo from "../../images/bnb.png"
 import binanceGuide from "../../images/binance-tutorial.png"
+import geminiLogo from "../../images/gemini.png"
+import geminiGuide from "../../images/gemini-tutorial.png"
+import tomochain from "../../images/tomochain.png"
 import particleConfig from "./particle-config"
 import styled from "styled-components"
 import backgroundImage from "../../images/background2.png"
@@ -144,11 +147,20 @@ class Home extends Component {
             <h1 className="col">Latest Reviews / Guides</h1>
           </div>
 
-          <div style={{ paddingTop: "15px" }} className="row">
+          <div
+            style={{
+              paddingTop: "15px",
+              display: "flex",
+              justifyContent: "flex-start"
+            }}
+            className="row"
+          >
+            {/* Binance exchange */}
             <div
               className="card"
               style={{
-                width: "20rem"
+                width: "20rem",
+                margin: "5px"
               }}
             >
               <a
@@ -163,6 +175,7 @@ class Home extends Component {
                     src={binanceLogo}
                     style={{
                       width: "100%",
+                      maxHeight: "80px",
                       display: "inline-block",
                       marginBottom: "10px"
                     }}
@@ -178,13 +191,97 @@ class Home extends Component {
                   />
                   <h4 className="card-title">Binance Exchange Guide</h4>
                   <p className="card-text">
-                    Learn how to trade on one of the best cryptocurrency
-                    exchanges!
+                    Learn how to trade Cryptocurrencies pairs on one of the best
+                    cryptocurrency exchanges!
                   </p>
                   <ButtonLink href="/binance">View Video</ButtonLink>
                 </div>
               </a>
             </div>
+            {/* End of Binance Exchange */}
+
+            {/* Gemini exchange */}
+            <div
+              className="card"
+              style={{
+                width: "20rem",
+                margin: "5px"
+              }}
+            >
+              <a
+                href="/gemini"
+                style={{ textDecoration: "none", color: "#222529" }}
+              >
+                <div
+                  className="card-block"
+                  style={{ padding: "20px", textAlign: "center" }}
+                >
+                  <img
+                    src={geminiLogo}
+                    style={{
+                      maxHeight: "60px",
+                      display: "inline-block",
+                      marginBottom: "10px",
+                      borderRadius: "5px"
+                    }}
+                  />
+                  <img
+                    src={geminiGuide}
+                    style={{
+                      width: "100%",
+                      display: "inline-block",
+                      marginBottom: "10px"
+                    }}
+                    alt="Binance"
+                  />
+                  <h4 className="card-title">Gemini Exchange Guide</h4>
+                  <p className="card-text">
+                    Gemini provides fiat to cryptocurreny pairings. Learn how to
+                    use Gemini Exchange in this video tutorial.
+                  </p>
+                  <ButtonLink href="/gemini">View Video</ButtonLink>
+                </div>
+              </a>
+            </div>
+            {/* End of gemini */}
+
+            {/* TomoChain exchange */}
+            <div
+              className="card"
+              style={{
+                width: "20rem",
+                margin: "5px"
+              }}
+            >
+              <a
+                href="/tomochain"
+                style={{ textDecoration: "none", color: "#222529" }}
+              >
+                <div
+                  className="card-block"
+                  style={{ padding: "20px", textAlign: "center" }}
+                >
+                  <img
+                    src={tomochain}
+                    style={{
+                      width: "100%",
+                      display: "inline-block",
+                      marginBottom: "10px"
+                    }}
+                    alt="Binance"
+                  />
+                  <h4 className="card-title">TomoChain ICO Review</h4>
+                  <p className="card-text">
+                    Tomo Coin is a digital currency that will be used in the
+                    Tomo ecosystem which consists of 3 parts: the TomoChain, the
+                    TomoWallet, and apps built on top of TomoChain. Check out
+                    our review regarding their upcoming ICO.
+                  </p>
+                  <ButtonLink href="/tomochain">View Video</ButtonLink>
+                </div>
+              </a>
+            </div>
+            {/* End of tomochain */}
           </div>
         </div>
       </div>

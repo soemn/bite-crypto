@@ -2,7 +2,7 @@ import React from "react"
 
 const Experty = () => (
   <div className="container">
-    <div style={{ paddingTop: "15px" }}>
+    <div style={{ paddingTop: "20px" }}>
       <h1>Experty Token Review</h1>
     </div>
     <div className="row" style={{ paddingTop: "15px" }}>

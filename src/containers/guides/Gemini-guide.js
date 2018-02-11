@@ -5,19 +5,19 @@ const Container = styled.div.attrs({
   className: "container"
 })``
 
-const BinanceGuide = () => (
+const GeminiGuide = () => (
   <Container>
     <div style={{ paddingTop: "15px" }}>
-      <h1>Binance Exchange Guide</h1>
+      <h1>Gemini Exchange Guide</h1>
     </div>
     <div className="row" style={{ paddingTop: "15px" }}>
       <div className="col">
         <iframe
-          src="https://www.youtube.com/embed/u8-4ls64EaQ"
+          src="https://www.youtube.com/embed/n_i_pjoHmwo"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          title="Binance"
+          title="Gemini"
           style={{
             height: "378px",
             width: "100%",
@@ -35,26 +35,26 @@ const BinanceGuide = () => (
         }}
         className="col"
       >
-        <h3>Binance Guide</h3>
+        <h3>Gemini Guide</h3>
         <p>
-          Binance is currently the second largest Crypto-Crypto exchange by
-          trading volume. It currently boasts over 200 trading pairs , which
-          makes it ideal for those looking to trade a large variety of
-          cryptocurrencies. It also charges a relatively low trading fee of 0.1%
-          per trade and provides discounts when paying fees using its Binance
-          Coin(BNB). This video provides a step-by-step guide for setting up
-          your Binance account!
+          Gemini is a wellknown licensed digital currency exchange, regulated by
+          the New York State Department of Financial Services (NYSDFS). Dealing
+          with both individual and institutional clients, Gemini aims to be the
+          bridge between fiat currency and cryptocurreny, offering USD trading
+          pairs with both Bitcoin (BTC) and Ethereum (ETH) with low fees of
+          0.25% per trade. This video provides a step-by-step guide for setting
+          up your Gemini account!
         </p>
         <h3>Content:</h3>
         <ul>
           <li>Registering an account</li>
-          <li>Level 2 Verification</li>
+          <li>Adding a bank account</li>
           <li>Deposit and Withdrawal</li>
-          <li>Trading on Binance Exchange</li>
+          <li>Trading on Gemini</li>
         </ul>
       </div>
     </div>
   </Container>
 )
 
-export default BinanceGuide
+export default GeminiGuide
