@@ -43,6 +43,10 @@ const NavMain = styled.nav.attrs({
   background-color: #c9dff6;
 `
 
+const CollapseButton = styled.button.attrs({
+  className: "navbar-toggler"
+})``
+
 const Header = () => (
   <header>
     <NavMain className="navbar navbar-expand-lg navbar-light">
@@ -50,7 +54,7 @@ const Header = () => (
         <a className="navbar-brand" href="/">
           <img src={logo} style={{ height: "50px" }} alt="Bite Crypto" />
         </a>
-        <button
+        <CollapseButton
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -60,7 +64,7 @@ const Header = () => (
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
-        </button>
+        </CollapseButton>
 
         <div className="collapse navbar-collapse" id="navbarToggler">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 pullRight">

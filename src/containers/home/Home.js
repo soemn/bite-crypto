@@ -39,7 +39,8 @@ const HomeBackgroundText = styled.div`
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-family: "Libre Franklin Black";
+  font-family: "Cormorant Garamond";
+  padding: 15px;
 `
 const MainContent = styled.div.attrs({
   className: "container"
@@ -62,6 +63,27 @@ const ButtonLink = styled.div.attrs({
     transition: 0.5s;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
+`
+
+const MainContentDescription = styled.div`
+  font-family: "Proza Libre";
+`
+
+const OtherGuides = styled.h1.attrs({ className: "col" })`
+  font-family: "Cormorant Garamond";
+  font-weight: bold;
+`
+
+const CardTitle = styled.div.attrs({ className: "card-title" })`
+  font-family: "Cormorant Garamond";
+  font-size: 28px;
+  font-weight: bold;
+`
+
+const CardText = styled.div.attrs({ className: "card-text" })`
+  font-family: "Proza Libre";
+  font-size: 16px;
+  margin-bottom: 10px;
 `
 
 class Home extends Component {
@@ -115,25 +137,29 @@ class Home extends Component {
                   borderRadius: "5px",
                   textAlign: "center",
                   padding: "5px",
-                  boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)"
+                  boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+                  fontFamily: "Cormorant Garamond",
+                  fontWeight: "1000"
                 }}
               >
                 Experty Review
               </h3>
-              <p>
+              <MainContentDescription>
                 Experty is a protocol that brings the “expert network” business
                 onto the blockchain. It aims to connect experienced
                 professionals to users for consulting purposes.
-              </p>
-              <p>
+                <br />
+                <br />
                 Experty plans to integrate their business into available social
                 media platform; knowledge providers will be able to share their
                 Experty link directly on their social or professional media such
-                as LinkedIn, email signature, or Twitter profile. Payments will
-                also be made through a smart contract that directly links the
-                knowledge provider with the knowledge seeker, so payment between
-                the two parties will be near instant.
-              </p>
+                as LinkedIn, email signature, or Twitter profile.
+                <br />
+                <br />
+                Payments will also be made through a smart contract that
+                directly links the knowledge provider with the knowledge seeker,
+                so payment between the two parties will be near instant.
+              </MainContentDescription>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <a href="/experty">
                   <ButtonLink>Read More</ButtonLink>
@@ -147,7 +173,7 @@ class Home extends Component {
           style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
           <div className="row">
-            <h1 className="col">Latest Reviews / Guides</h1>
+            <OtherGuides>Latest Reviews / Guides</OtherGuides>
           </div>
 
           <div
@@ -192,11 +218,13 @@ class Home extends Component {
                     }}
                     alt="Binance"
                   />
-                  <h4 className="card-title">Binance Exchange Guide</h4>
-                  <p className="card-text">
+                  <CardTitle className="card-title">
+                    Binance Exchange Guide
+                  </CardTitle>
+                  <CardText>
                     Learn how to trade Cryptocurrencies pairs on one of the best
                     cryptocurrency exchanges!
-                  </p>
+                  </CardText>
                   <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
@@ -237,11 +265,13 @@ class Home extends Component {
                     }}
                     alt="Binance"
                   />
-                  <h4 className="card-title">Gemini Exchange Guide</h4>
-                  <p className="card-text">
+                  <CardTitle className="card-title">
+                    Gemini Exchange Guide
+                  </CardTitle>
+                  <CardText>
                     Gemini provides fiat to cryptocurreny pairings. Learn how to
                     use Gemini Exchange in this video tutorial.
-                  </p>
+                  </CardText>
                   <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
@@ -273,13 +303,15 @@ class Home extends Component {
                     }}
                     alt="Binance"
                   />
-                  <h4 className="card-title">TomoChain ICO Review</h4>
-                  <p className="card-text">
+                  <CardTitle className="card-title">
+                    TomoChain ICO Review
+                  </CardTitle>
+                  <CardText>
                     Tomo Coin is a digital currency that will be used in the
                     Tomo ecosystem which consists of 3 parts: the TomoChain, the
                     TomoWallet, and apps built on top of TomoChain. Check out
                     our review regarding their upcoming ICO.
-                  </p>
+                  </CardText>
                   <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
