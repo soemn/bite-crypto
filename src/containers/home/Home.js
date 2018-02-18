@@ -7,7 +7,7 @@ import geminiGuide from "../../images/gemini-tutorial.png"
 import tomochain from "../../images/tomochain.png"
 import particleConfig from "./particle-config"
 import styled from "styled-components"
-import backgroundImage from "../../images/background2.png"
+import backgroundImage from "../../images/background.jpeg"
 import logo from "../../images/bite-crypto-logo.png"
 
 const HomeBackground = styled.div``
@@ -39,6 +39,7 @@ const HomeBackgroundText = styled.div`
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Libre Franklin Black";
 `
 const MainContent = styled.div.attrs({
   className: "container"
@@ -49,7 +50,7 @@ const MainContent = styled.div.attrs({
   border-bottom-left-radius: 6px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `
-const ButtonLink = styled.a.attrs({
+const ButtonLink = styled.div.attrs({
   className: "btn"
 })`
   background-color: #1198ea;
@@ -134,7 +135,9 @@ class Home extends Component {
                 the two parties will be near instant.
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <ButtonLink href="/experty">Read More</ButtonLink>
+                <a href="/experty">
+                  <ButtonLink>Read More</ButtonLink>
+                </a>
               </div>
             </div>
           </div>
@@ -194,7 +197,7 @@ class Home extends Component {
                     Learn how to trade Cryptocurrencies pairs on one of the best
                     cryptocurrency exchanges!
                   </p>
-                  <ButtonLink href="/binance">View Video</ButtonLink>
+                  <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
             </div>
@@ -239,7 +242,7 @@ class Home extends Component {
                     Gemini provides fiat to cryptocurreny pairings. Learn how to
                     use Gemini Exchange in this video tutorial.
                   </p>
-                  <ButtonLink href="/gemini">View Video</ButtonLink>
+                  <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
             </div>
@@ -277,7 +280,7 @@ class Home extends Component {
                     TomoWallet, and apps built on top of TomoChain. Check out
                     our review regarding their upcoming ICO.
                   </p>
-                  <ButtonLink href="/tomochain">View Video</ButtonLink>
+                  <ButtonLink>View Video</ButtonLink>
                 </div>
               </a>
             </div>
