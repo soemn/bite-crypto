@@ -1,16 +1,14 @@
 import React, { Component } from "react"
 import Particles from "react-particles-js"
-import binanceLogo from "../../images/bnb.png"
-import binanceGuide from "../../images/binance-tutorial.png"
-import geminiLogo from "../../images/gemini.png"
-import geminiGuide from "../../images/gemini-tutorial.png"
-import tomochain from "../../images/tomochain.png"
+
 import particleConfig from "./particle-config"
 import styled from "styled-components"
 import backgroundImage from "../../images/background.jpeg"
 import logo from "../../images/bite-crypto-logo.png"
+import Card from "../card/Card"
+import cardData from "./cardData"
 
-const HomeBackground = styled.div``
+// const HomeBackground = styled.div``
 const HomeHeaderWrapper = styled.div``
 const StyledParticles = styled(Particles)`
   width: 100%;
@@ -74,19 +72,55 @@ const OtherGuides = styled.h1.attrs({ className: "col" })`
   font-weight: bold;
 `
 
-const CardTitle = styled.div.attrs({ className: "card-title" })`
-  font-family: "Cormorant Garamond";
-  font-size: 28px;
-  font-weight: bold;
+const CardItemsList = styled.div`
+  padding-top: 15px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
-const CardText = styled.div.attrs({ className: "card-text" })`
-  font-family: "Proza Libre";
-  font-size: 16px;
-  margin-bottom: 10px;
+const CardItem = styled.div`
+  display: flex;
+  min-width: 33%;
+  max-width: 33%;
+
+  @media (max-width: 1023px) {
+    min-width: 50%;
+    max-width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
 `
 
 class Home extends Component {
+  componentDidMount() {
+    console.log(this.createCardItems(cardData))
+  }
+
+  createCardItem = (cardItem, index) => (
+    <CardItem>
+      <Card
+        title={cardItem.title}
+        link={cardItem.link}
+        description={cardItem.description}
+        image={cardItem.image}
+        key={index}
+      />
+    </CardItem>
+  )
+
+  createCardItems = cardData => {
+    const cardDataCopy = [...cardData]
+    const cardItemsArr = cardDataCopy.map((cardItem, index) =>
+      this.createCardItem(cardItem, index)
+    )
+    return cardItemsArr
+  }
+
   render() {
     return (
       <div style={{ background: "#f9f9f9" }}>
@@ -172,152 +206,11 @@ class Home extends Component {
           className="container"
           style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
-          <div className="row">
+          <div>
             <OtherGuides>Latest Reviews / Guides</OtherGuides>
           </div>
 
-          <div
-            style={{
-              paddingTop: "15px",
-              display: "flex",
-              justifyContent: "flex-start"
-            }}
-            className="row"
-          >
-            {/* Binance exchange */}
-            <div
-              className="card"
-              style={{
-                width: "20rem",
-                margin: "5px"
-              }}
-            >
-              <a
-                href="/binance"
-                style={{ textDecoration: "none", color: "#222529" }}
-              >
-                <div
-                  className="card-block"
-                  style={{ padding: "20px", textAlign: "center" }}
-                >
-                  <img
-                    src={binanceLogo}
-                    style={{
-                      width: "100%",
-                      maxHeight: "80px",
-                      display: "inline-block",
-                      marginBottom: "10px"
-                    }}
-                  />
-                  <img
-                    src={binanceGuide}
-                    style={{
-                      width: "100%",
-                      display: "inline-block",
-                      marginBottom: "10px"
-                    }}
-                    alt="Binance"
-                  />
-                  <CardTitle className="card-title">
-                    Binance Exchange Guide
-                  </CardTitle>
-                  <CardText>
-                    Learn how to trade Cryptocurrencies pairs on one of the best
-                    cryptocurrency exchanges!
-                  </CardText>
-                  <ButtonLink>View Video</ButtonLink>
-                </div>
-              </a>
-            </div>
-            {/* End of Binance Exchange */}
-
-            {/* Gemini exchange */}
-            <div
-              className="card"
-              style={{
-                width: "20rem",
-                margin: "5px"
-              }}
-            >
-              <a
-                href="/gemini"
-                style={{ textDecoration: "none", color: "#222529" }}
-              >
-                <div
-                  className="card-block"
-                  style={{ padding: "20px", textAlign: "center" }}
-                >
-                  <img
-                    src={geminiLogo}
-                    style={{
-                      maxHeight: "60px",
-                      display: "inline-block",
-                      marginBottom: "10px",
-                      borderRadius: "5px"
-                    }}
-                  />
-                  <img
-                    src={geminiGuide}
-                    style={{
-                      width: "100%",
-                      display: "inline-block",
-                      marginBottom: "10px"
-                    }}
-                    alt="Binance"
-                  />
-                  <CardTitle className="card-title">
-                    Gemini Exchange Guide
-                  </CardTitle>
-                  <CardText>
-                    Gemini provides fiat to cryptocurreny pairings. Learn how to
-                    use Gemini Exchange in this video tutorial.
-                  </CardText>
-                  <ButtonLink>View Video</ButtonLink>
-                </div>
-              </a>
-            </div>
-            {/* End of gemini */}
-
-            {/* TomoChain exchange */}
-            <div
-              className="card"
-              style={{
-                width: "20rem",
-                margin: "5px"
-              }}
-            >
-              <a
-                href="/tomochain"
-                style={{ textDecoration: "none", color: "#222529" }}
-              >
-                <div
-                  className="card-block"
-                  style={{ padding: "20px", textAlign: "center" }}
-                >
-                  <img
-                    src={tomochain}
-                    style={{
-                      width: "100%",
-                      display: "inline-block",
-                      marginBottom: "10px"
-                    }}
-                    alt="Binance"
-                  />
-                  <CardTitle className="card-title">
-                    TomoChain ICO Review
-                  </CardTitle>
-                  <CardText>
-                    Tomo Coin is a digital currency that will be used in the
-                    Tomo ecosystem which consists of 3 parts: the TomoChain, the
-                    TomoWallet, and apps built on top of TomoChain. Check out
-                    our review regarding their upcoming ICO.
-                  </CardText>
-                  <ButtonLink>View Video</ButtonLink>
-                </div>
-              </a>
-            </div>
-            {/* End of tomochain */}
-          </div>
+          <CardItemsList>{this.createCardItems(cardData)}</CardItemsList>
         </div>
       </div>
     )
