@@ -1,5 +1,8 @@
 import React from "react"
-import logo from "../images/bite-crypto-small.png"
+import logo from "../../images/bite-crypto-logo.png"
+import Particles from "react-particles-js"
+import particleConfig from "./particle-config"
+import backgroundImage from "../../images/background.jpeg"
 import styled from "styled-components"
 
 const NavDropdown = styled.li.attrs({
@@ -41,19 +44,81 @@ const NavMain = styled.nav.attrs({
   className: "navbar navbar-expand-lg navbar-light"
 })`
   background-color: #c9dff6;
+  padding: 0;
+
+  @media (max-width: 991px) {
+    padding: 8px 15px;
+  }
 `
 
 const CollapseButton = styled.button.attrs({
   className: "navbar-toggler"
 })``
 
+const StyledParticles = styled(Particles)`
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  margin-bottom: -100px;
+  position: absolute;
+  overflow: hidden;
+`
+const HeaderTopWrapper = styled.div`
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+`
+const HeaderTopContent = styled.div.attrs({
+  className: "container"
+})`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #f1f5fa;
+  justify-content: flex-start;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Cormorant Garamond";
+  padding: 15px;
+`
+
+const HeaderTopText = styled.a`
+  text-decoration: none !important;
+  color: #f1f1f1;
+  z-index: 2;
+
+  :hover {
+    color: #f1f1f1;
+  }
+`
+
+const HeaderLogoImage = styled.a`
+  margin-right: 10px;
+  z-index: 2;
+`
+
 const Header = () => (
   <header>
-    <NavMain className="navbar navbar-expand-lg navbar-light">
-      <div className="container">
-        <a className="navbar-brand" href="/">
+    <HeaderTopWrapper>
+      <StyledParticles params={particleConfig} />
+      <HeaderTopContent>
+        <HeaderLogoImage href="/">
           <img src={logo} style={{ height: "50px" }} alt="Bite Crypto" />
-        </a>
+        </HeaderLogoImage>
+        <HeaderTopText href="/">
+          <h1 style={{ margin: "0" }}>Bitecrypto</h1>
+        </HeaderTopText>
+      </HeaderTopContent>
+    </HeaderTopWrapper>
+
+    <NavMain>
+      <div className="container">
         <CollapseButton
           className="navbar-toggler"
           type="button"

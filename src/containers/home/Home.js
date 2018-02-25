@@ -1,45 +1,45 @@
 import React, { Component } from "react"
 import Particles from "react-particles-js"
 
-import particleConfig from "./particle-config"
-import styled from "styled-components"
+// import particleConfig from "./particle-config"
 import backgroundImage from "../../images/background.jpeg"
 import logo from "../../images/bite-crypto-logo.png"
 import Card from "../card/Card"
 import cardData from "./cardData"
+import styled from "styled-components"
 
 // const HomeBackground = styled.div``
-const HomeHeaderWrapper = styled.div``
-const StyledParticles = styled(Particles)`
-  width: 100%;
-  max-height: 400px;
-  min-height: 400px;
-  margin-bottom: -400px;
-  position: absolute;
-  overflow: hidden;
-`
-const HomeBackgroundContent = styled.div`
-  background-image: url(${backgroundImage});
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-height: 400px;
-  min-height: 400px;
-`
-const HomeBackgroundText = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  color: #f1f5fa;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-family: "Cormorant Garamond";
-  padding: 15px;
-`
+// const HomeHeaderWrapper = styled.div``
+// const StyledParticles = styled(Particles)`
+//   width: 100%;
+//   max-height: 400px;
+//   min-height: 400px;
+//   margin-bottom: -400px;
+//   position: absolute;
+//   overflow: hidden;
+// `
+// const HomeBackgroundContent = styled.div`
+//   background-image: url(${backgroundImage});
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   max-height: 400px;
+//   min-height: 400px;
+// `
+// const HomeBackgroundText = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   color: #f1f5fa;
+//   justify-content: center;
+//   align-items: center;
+//   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+//   font-family: "Cormorant Garamond";
+//   padding: 15px;
+// `
 const MainContent = styled.div.attrs({
   className: "container"
 })`
@@ -67,9 +67,19 @@ const MainContentDescription = styled.div`
   font-family: "Proza Libre";
 `
 
-const OtherGuides = styled.h1.attrs({ className: "col" })`
+const Titles = styled.h1`
   font-family: "Cormorant Garamond";
+  font-size: 30px;
   font-weight: bold;
+  padding: 0;
+  border-bottom: 3px double #0c2b57;
+`
+
+const MainTitle = styled.h1`
+  font-family: "Cormorant Garamond";
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 0;
 `
 
 const CardItemsList = styled.div`
@@ -124,7 +134,7 @@ class Home extends Component {
   render() {
     return (
       <div style={{ background: "#f9f9f9" }}>
-        <HomeHeaderWrapper>
+        {/* <HomeHeaderWrapper>
           <HomeBackgroundContent>
             <StyledParticles params={particleConfig} />
             <HomeBackgroundText>
@@ -133,14 +143,10 @@ class Home extends Component {
               </h1>
             </HomeBackgroundText>
           </HomeBackgroundContent>
-        </HomeHeaderWrapper>
+        </HomeHeaderWrapper> */}
         <MainContent>
-          <div
-            style={{
-              marginTop: "20px"
-            }}
-            className="row"
-          >
+          <MainTitle>Hot Stories</MainTitle>
+          <div className="row">
             <div className="col">
               <iframe
                 src="https://www.youtube.com/embed/r-iLWMTc354"
@@ -206,10 +212,7 @@ class Home extends Component {
           className="container"
           style={{ paddingTop: "20px", paddingBottom: "60px" }}
         >
-          <div>
-            <OtherGuides>Latest Reviews / Guides</OtherGuides>
-          </div>
-
+          <Titles>Latest Reviews & Guides</Titles>
           <CardItemsList>{this.createCardItems(cardData)}</CardItemsList>
         </div>
       </div>
