@@ -1,45 +1,9 @@
 import React, { Component } from "react"
-import Particles from "react-particles-js"
-
-// import particleConfig from "./particle-config"
-import backgroundImage from "../../images/background.jpeg"
-import logo from "../../images/bite-crypto-logo.png"
 import Card from "../card/Card"
 import cardData from "./cardData"
 import styled from "styled-components"
+import ReactPlayer from "react-player"
 
-// const HomeBackground = styled.div``
-// const HomeHeaderWrapper = styled.div``
-// const StyledParticles = styled(Particles)`
-//   width: 100%;
-//   max-height: 400px;
-//   min-height: 400px;
-//   margin-bottom: -400px;
-//   position: absolute;
-//   overflow: hidden;
-// `
-// const HomeBackgroundContent = styled.div`
-//   background-image: url(${backgroundImage});
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   max-height: 400px;
-//   min-height: 400px;
-// `
-// const HomeBackgroundText = styled.div`
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   color: #f1f5fa;
-//   justify-content: center;
-//   align-items: center;
-//   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-//   font-family: "Cormorant Garamond";
-//   padding: 15px;
-// `
 const MainContent = styled.div.attrs({
   className: "container"
 })`
@@ -107,10 +71,6 @@ const CardItem = styled.div`
 `
 
 class Home extends Component {
-  componentDidMount() {
-    console.log(this.createCardItems(cardData))
-  }
-
   createCardItem = (cardItem, index) => (
     <CardItem>
       <Card
@@ -134,29 +94,15 @@ class Home extends Component {
   render() {
     return (
       <div style={{ background: "#f9f9f9" }}>
-        {/* <HomeHeaderWrapper>
-          <HomeBackgroundContent>
-            <StyledParticles params={particleConfig} />
-            <HomeBackgroundText>
-              <h1 style={{ textAlign: "center" }}>
-                Bite Crypto. Providing bite sized cryptocurrency info.
-              </h1>
-            </HomeBackgroundText>
-          </HomeBackgroundContent>
-        </HomeHeaderWrapper> */}
         <MainContent>
           <MainTitle>Hot Stories</MainTitle>
           <div className="row">
             <div className="col">
-              <iframe
-                src="https://www.youtube.com/embed/r-iLWMTc354"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title="Experty"
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=r-iLWMTc354"
+                controls={true}
+                width="100%"
                 style={{
-                  height: "378px",
-                  width: "100%",
                   maxWidth: "672px",
                   minWidth: "290px",
                   borderRadius: "5px",
