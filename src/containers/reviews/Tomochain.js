@@ -1,27 +1,27 @@
-import React from "react"
-import ReactMarkdown from "react-markdown"
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const Tomochain = () => (
   <div className="container">
-    <div style={{ paddingTop: "20px" }}>
+    <div style={{ paddingTop: '20px' }}>
       <h1>TomoChain Token Review</h1>
     </div>
-    <div className="row" style={{ paddingTop: "15px" }}>
+    <div className="row" style={{ paddingTop: '15px' }}>
       <div className="col">
         <iframe
           src="https://www.youtube.com/embed/LueHI5Uh7tA"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          title="Binance"
+          title="Tomochain"
           style={{
-            height: "378px",
-            width: "100%",
-            maxWidth: "672px",
-            minWidth: "290px",
-            borderRadius: "5px",
-            boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
-            marginBottom: "8px"
+            height: '378px',
+            width: '100%',
+            maxWidth: '672px',
+            minWidth: '290px',
+            borderRadius: '5px',
+            boxShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)',
+            marginBottom: '8px'
           }}
         />
       </div>

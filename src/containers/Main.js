@@ -1,12 +1,13 @@
-import React from "react"
-import { Switch, Route } from "react-router-dom"
-import Home from "./home/Home"
-import About from "./About"
-import Experty from "./reviews/Experty"
-import TomoChain from "./reviews/Tomochain"
-import BinanceGuide from "./guides/Binance-guide"
-import GeminiGuide from "./guides/Gemini-guide"
-import styled from "styled-components"
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Home from './home/Home'
+import About from './About'
+import Experty from './reviews/Experty'
+import TomoChain from './reviews/Tomochain'
+import Unibright from './reviews/Unibright'
+import BinanceGuide from './guides/Binance-guide'
+import GeminiGuide from './guides/Gemini-guide'
+import styled from 'styled-components'
 
 const MainWrapper = styled.main`
   display: flex;
@@ -23,6 +24,7 @@ const Main = () => (
       <Route path="/tomochain" component={TomoChain} />
       <Route path="/binance" component={BinanceGuide} />
       <Route path="/gemini" component={GeminiGuide} />
+      <Route path="/unibright" component={Unibright} />
     </Switch>
   </MainWrapper>
 )

@@ -1,12 +1,12 @@
-import React from "react"
-import logo from "../../images/bite-crypto-logo.png"
-import Particles from "react-particles-js"
-import particleConfig from "./particle-config"
-import backgroundImage from "../../images/background.jpeg"
-import styled from "styled-components"
+import React from 'react'
+import logo from '../../images/bite-crypto-logo.png'
+import Particles from 'react-particles-js'
+import particleConfig from './particle-config'
+import backgroundImage from '../../images/background.jpeg'
+import styled from 'styled-components'
 
 const NavDropdown = styled.li.attrs({
-  className: "nav-item dropdown"
+  className: 'nav-item dropdown'
 })`
   :hover {
     cursor: pointer;
@@ -14,11 +14,11 @@ const NavDropdown = styled.li.attrs({
 `
 
 const NavItem = styled.a.attrs({
-  className: "nav-link"
+  className: 'nav-link'
 })`
   text-transform: uppercase;
   color: #253137 !important;
-  font-family: "Libre Franklin";
+  font-family: 'Libre Franklin';
   font-weight: 1000;
   margin: 0 6px;
   :hover {
@@ -28,10 +28,10 @@ const NavItem = styled.a.attrs({
 `
 
 const DropdownItem = styled.a.attrs({
-  className: "nav-link"
+  className: 'nav-link'
 })`
   margin-left: 5px;
-  font-family: "Libre Franklin";
+  font-family: 'Libre Franklin';
   font-weight: 1000;
   :hover {
     color: black !important;
@@ -41,7 +41,7 @@ const DropdownItem = styled.a.attrs({
 `
 
 const NavMain = styled.nav.attrs({
-  className: "navbar navbar-expand-lg navbar-light"
+  className: 'navbar navbar-expand-lg navbar-light'
 })`
   background-color: #c9dff6;
   padding: 0;
@@ -52,7 +52,7 @@ const NavMain = styled.nav.attrs({
 `
 
 const CollapseButton = styled.button.attrs({
-  className: "navbar-toggler"
+  className: 'navbar-toggler'
 })``
 
 const StyledParticles = styled(Particles)`
@@ -75,7 +75,7 @@ const HeaderTopWrapper = styled.div`
   min-height: 100px;
 `
 const HeaderTopContent = styled.div.attrs({
-  className: "container"
+  className: 'container'
 })`
   display: flex;
   width: 100%;
@@ -84,7 +84,7 @@ const HeaderTopContent = styled.div.attrs({
   justify-content: flex-start;
   align-items: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-family: "Cormorant Garamond";
+  font-family: 'Cormorant Garamond';
   padding: 15px;
 `
 
@@ -109,10 +109,10 @@ const Header = () => (
       <StyledParticles params={particleConfig} />
       <HeaderTopContent>
         <HeaderLogoImage href="/">
-          <img src={logo} style={{ height: "50px" }} alt="Bite Crypto" />
+          <img src={logo} style={{ height: '50px' }} alt="Bite Crypto" />
         </HeaderLogoImage>
         <HeaderTopText href="/">
-          <h1 style={{ margin: "0" }}>Bitecrypto</h1>
+          <h1 style={{ margin: '0' }}>Bitecrypto</h1>
         </HeaderTopText>
       </HeaderTopContent>
     </HeaderTopWrapper>
@@ -156,6 +156,9 @@ const Header = () => (
                 </DropdownItem>
                 <DropdownItem className="dropdown-item" href="/tomochain">
                   TomoChain
+                </DropdownItem>
+                <DropdownItem className="dropdown-item" href="/unibright">
+                  Unibright
                 </DropdownItem>
               </div>
             </NavDropdown>
