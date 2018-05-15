@@ -1,19 +1,34 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import styled from 'styled-components'
+
+const ArticleBody = styled.div`
+  color: #333333;
+  padding-bottom: 40px;
+  h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #0a5785;
+  }
+  h3 {
+    padding: 8px 0 5px 0;
+    color: #0a5785;
+  }
+`
 
 const Unibright = () => (
   <div className="container">
     <div style={{ paddingTop: '20px' }}>
       <h1>Unibright Token Review</h1>
     </div>
-    {/* <div className="row" style={{ paddingTop: '15px' }}>
+    <div className="row" style={{ paddingTop: '15px' }}>
       <div className="col">
         <iframe
-          src="https://www.youtube.com/embed/LueHI5Uh7tA"
+          src="https://www.youtube.com/embed/LwQprVaLBuo"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          title="Binance"
+          title="Unibright"
           style={{
             height: '378px',
             width: '100%',
@@ -25,14 +40,14 @@ const Unibright = () => (
           }}
         />
       </div>
-    </div> */}
-    <div style={{ paddingBottom: '50px', h2: { paddingTop: '25px' } }}>
+    </div>
+    <ArticleBody>
       <ReactMarkdown
         source={`
 ## Unibright
 Website: https://unibright.io/
 
-Whitepaper: https://unibright.io/download/Unibright_Whitepaper.pdf
+Whitepaper: [Link](https://unibright.io/download/Unibright_Whitepaper.pdf)
 
 ## Project Summary
 Unibright is an project aiming to **achieve business integration of blockchain technology** into existing businesses. With the recent mainstream media coverage of blockchain and cryptocurrencies, more companies are showing interest in the adoption of blockchain technologies.
@@ -137,7 +152,7 @@ We believe that the teams top members are solid, most of them have **more than 2
       
 `}
       />
-    </div>
+    </ArticleBody>
   </div>
 )
 

@@ -1,5 +1,20 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import styled from 'styled-components'
+
+const ArticleBody = styled.div`
+  color: #333333;
+  padding-bottom: 40px;
+  h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #0a5785;
+  }
+  h3 {
+    padding: 8px 0 5px 0;
+    color: #0a5785;
+  }
+`
 
 const Tomochain = () => (
   <div className="container">
@@ -26,9 +41,9 @@ const Tomochain = () => (
         />
       </div>
     </div>
-
-    <ReactMarkdown
-      source={`
+    <ArticleBody>
+      <ReactMarkdown
+        source={`
 ## TomoChain
 
 Website: https://tomocoin.io/
@@ -122,7 +137,8 @@ We believe that this project is a good short term investment. As the Ethereum ne
 As for the long term outlook, we are neutral on this project. There is little detail available regarding the future direction of Tomocoin as their roadmap is not very extensive. Furthermore, to ensure its long term success, Tomocoin needs to have its own unique and differentiating characteristics from the Ethereum network, so as to maintain its userbase.
 
 `}
-    />
+      />
+    </ArticleBody>
   </div>
 )
 
